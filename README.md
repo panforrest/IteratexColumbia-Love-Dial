@@ -14,11 +14,20 @@ npm install
 
 ### 2. Add API Keys
 
-Edit `src/background/background.ts` and replace:
-- `ELEVENLABS_API_KEY` (line ~120) - Get from https://elevenlabs.io
-- `ANTHROPIC_API_KEY` (line ~200) - Get from https://console.anthropic.com
+**⚠️ IMPORTANT:** You must add your API keys before using the extension.
+
+Edit `src/background/background.ts` and replace the placeholder values:
+- Line ~120: Replace `YOUR_ELEVENLABS_API_KEY_HERE` with your ElevenLabs API key
+  - Get your API key from: https://elevenlabs.io/app/settings/api-keys
+- Line ~231: Replace `YOUR_ANTHROPIC_API_KEY_HERE` with your Anthropic API key
+  - Get your API key from: https://console.anthropic.com/settings/keys
 
 **Note:** The extension uses the Antoni voice (ElevenLabs Voice ID: `ErXwobaYiN019PkySvjV`)
+
+After adding API keys, rebuild the extension:
+```bash
+npm run build
+```
 
 ### 3. Build Extension
 ```bash
